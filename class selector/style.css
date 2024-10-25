@@ -1,0 +1,27 @@
+body{
+    background-color: white;
+}
+#align_magin{
+    margin-left: 100px;
+    margin-right: 40px;
+}
+.navbar{
+    background-color: blue;
+    text-align: center;
+    border-radius: 10px;
+}
+.navbar ul{
+    display: flex;
+    justify-content: space-around;
+}
+.navbar ul a{
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    padding: 10px 20px;
+}
+.navbar ul a:hover{
+    padding: 10px 20px;
+    background-color:gold;
+    border-radius: 10px;
+}
