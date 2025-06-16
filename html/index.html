@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+  </head>
+  <style>
+    * {
+      margin: 20px;
+    }
+    h1 {
+      /* display: block; */
+      /* width: 300px; */
+      border: 2px solid black;
+      /* height: 50px; */
+      text-align: center;
+    }
+  </style>
+  <body>
+    <p>If you click on me, I will disappear.</p>
+    <p>Click me away!</p>
+    <p>Click me too!</p>
+    <a href="">This is a tag and link google</a>
+    <h1 id="Hide">Hide all element</h1>
+    <button id="show">Show</button>
+    <script>
+      $(document).ready(function () {
+        $("p").click(function () {
+          $(this).hide();
+          $("p").css("background-color", "yellow");
+          $("p").css("color", "red");
+          $("p").css("font-size", "50px");
+        });
+      });
+
+      $(document).ready(function () {
+        $("p").css("background-color", "cyan");
+      });
+
+      $("a").dblclick(function (e) {
+        alert("Hello");
+        $(this).css("background-color", "grey");
+      });
+
+      $(document).ready(function () {
+        $("a").click(function (event) {
+          $(this).css("background-color", "red");
+          $(this).css("color", "blue");
+          $(this).css("font-size", "50px");
+          $("body").css("background-color", "white");
+          event.preventDefault();
+        });
+
+        $("a").dblclick(function (e) {
+          $(this).css("color", "green");
+          $("body").css("background-color", "yellow");
+        });
+
+        $("#Hide").mouseleave(function (e) {
+          $("a").hide();
+          $("p").hide();
+          $("h1").hide();
+        });
+
+        $("#show").mouseenter(function (e) {
+          $("p").show();
+          $("a").show();
+          $("h1").show();
+        });
+      });
+    </script>
+  </body>
+</html>
